@@ -5,6 +5,8 @@
 
 **cd**: 
 > "Change Directory" Used to switch the current working directory
+
+
 1. With no arguments
    
    Command:
@@ -17,6 +19,7 @@
    * No output.
    * It typically means the command executed successfully when there is no output.
    * The user is returned to `/home`.
+
    
 2. With a path to a directory
 
@@ -30,6 +33,7 @@
    * No output.
    * It typically means the command executed successfully when there is no output.
    * The user is directed to `/home/lecture1`.
+
   
 3. With a path to a file
 
@@ -46,6 +50,8 @@
   
 **ls**:
 > "List" Used to list the files and folders the given path
+
+
 1. With no arguments
    
    Command:
@@ -68,6 +74,7 @@
    Output 3 (running in the directory `/home/lecture1/messages`):
    * `en-us.txt  es-mx.txt  ko.txt  zh-cn.txt`
    * It prints out all the files and folders inside `/home/lecture1/messages`.
+
    
 2. With a path to a directory
 
@@ -80,6 +87,7 @@
    Output (running in the given directory `/home/lecture1`):
    * `Hello.class  Hello.java  messages  README`
    * It prints out all the files and folders inside `/home/lecture1`.
+
   
 3. With a path to a file
 
@@ -93,8 +101,11 @@
    * `en-us.txt`
    * It repeats the filename of the specified file `en-us.txt` and any requested information if given. 
 
+
 **cat**:
 > "Concatenate" Used to print the contents of one or more files given by the paths
+
+
 1. With no arguments
    
    Command:
@@ -106,6 +117,7 @@
    Output (running in the directory where the command started):
    * It returns an error.
    * `cat` requires a file argument to display its contents. There is nothing to print out when no filename is given. 
+
      
 2. With a path to a directory
 
@@ -119,6 +131,7 @@
    * `cat: lecture1: Is a directory`
    * It returns an error.
    * `cat` requires a file argument to display its contents. There is nothing to print out when just a directory is given. 
+
   
 3. With a path to a file
 
