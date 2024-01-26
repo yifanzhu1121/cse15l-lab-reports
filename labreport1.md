@@ -3,49 +3,56 @@
 
 ***Basic filesystem commands***:
 
+IMPORTANT: 
+
+For all the Command and Output, it uses `pwd` to show the working directory first.
+
 **cd**: 
 > "Change Directory" Used to switch the current working directory
 
 
 1. With no arguments
    
-   Command:
-   ```
-   # Example for cd command
-   # No arguments
-   cd
-   ```
-   Output (running in the directory where the command started):
-   * No output.
-   * It typically means the command executed successfully when there is no output.
-   * The user is returned to `/home`.
+   Command and Output:
+
+   ![Image](cd.png)
+
+   Current Working Directory: `/home`
+   
+   Error or Not: NO
+
+   Reason:
+   * No output, but the user is returned to `/home`.
+   * Since there is no argument after `cd`, the directory returns to `home`.
 
    
 2. With a path to a directory
 
-   Command:
-   ```
-   # Example for cd command
-   # A path to a directory
-   cd lecture1
-   ```  
-   Output (running in the directory where the command started):
-   * No output.
-   * It typically means the command executed successfully when there is no output.
-   * The user is directed to `/home/lecture1`.
+   Command and Output:
+
+   ![Image](cdlecture1.png)
+
+   Current Working Directory: `/home`
+   
+   Error or Not: NO
+
+   Reason:
+   * No output, but the user is directed to `/home/lecture1` (shown by using `pwd` after the command.
+   * Since the argument is a directory name and `cd` is used to switch directory, the directory is switched to `/home/lecture1`.
 
   
 3. With a path to a file
 
-   Command:
-   ```
-   # Example for cd command
-   # A path to a file
-   cd en-us.txt
-   ```
-   Output (running in the directory where the command started):
-   * It returns an error. 
-   * The user cannot be directed to `/home/lecture1/messages/en-us.txt`, because `cd` is used to switch the directories but not files. 
+   Command and Output:
+
+   ![Image](cden-us.png)
+
+   Current Working Directory: `/home/lecture1/messages`
+   
+   Error or Not: ERROR
+
+   Reason:
+   * The user cannot be directed to `/home/lecture1/messages/en-us.txt` because `/en-us.txt` is a text file. But `cd` is used to switch the directories but not files.
 
   
 **ls**:
@@ -54,52 +61,44 @@
 
 1. With no arguments
    
-   Command:
-   ```
-   # Example for ls command
-   # No arguments
-   ls
-   ```
-   Output (running in the directory where the command started):
-   * It prints out all the files and folders inside the current directory.
+   Command and Output:
 
-   Output 1 (running in the home directory `/home`):
-   * `lecture1`
-   * It prints out all the files and folders inside `/home`.
+   ![Image](ls.png)
+   
+   Current Working Directory: `/home`
+   
+   Error or Not: NO
 
-   Output 2 (running in the directory `/home/lecture1`):
-   * `Hello.class  Hello.java  messages  README`
-   * It prints out all the files and folders inside `/home/lecture1`.
-
-   Output 3 (running in the directory `/home/lecture1/messages`):
-   * `en-us.txt  es-mx.txt  ko.txt  zh-cn.txt`
-   * It prints out all the files and folders inside `/home/lecture1/messages`.
+   Reason:
+   * `ls` prints out all the files and folders inside the current directory `/home`, which only has one directory `lecture1` in it.
 
    
 2. With a path to a directory
 
-   Command:
-   ```
-   # Example for ls command
-   # A path to a directory
-   ls lecture1
-   ```  
-   Output (running in the given directory `/home/lecture1`):
-   * `Hello.class  Hello.java  messages  README`
-   * It prints out all the files and folders inside `/home/lecture1`.
+   Command and Output:
+
+   ![Image](lslecture1.png)
+
+   Current Working Directory: `/home`
+   
+   Error or Not: NO
+
+   Reason:
+   * `ls lecture1` prints out all the files and folders inside `/home/lecture1`, so all the files and directories are printed out.
 
   
 3. With a path to a file
 
-   Command:
-   ```
-   # Example for ls command
-   # A path to a file
-   ls en-us.txt
-   ```
-   Output (running in the directory `/home/lecture1/messages`):
-   * `en-us.txt`
-   * It repeats the filename of the specified file `en-us.txt` and any requested information if given. 
+   Command and Output:
+
+   ![Image](lsen-us.png)
+   
+   Current Working Directory: `/home/lecture1/messages`
+   
+   Error or Not: NO
+
+   Reason:
+   * Since there is no files or folders in a text file `en-us.txt`，`ls` simply repeats the file name of it again. It could also consider as the only file in the given text file.
 
 
 **cat**:
@@ -108,39 +107,43 @@
 
 1. With no arguments
    
-   Command:
-   ```
-   # Example for cat command
-   # No arguments
-   cat
-   ```
-   Output (running in the directory where the command started):
-   * It returns an error.
-   * `cat` requires a file argument to display its contents. There is nothing to print out when no filename is given. 
+   Command and Output:
+   
+   ![Image](cat.png)
+   
+   Current Working Directory: `/home`
+   
+   Error or Not: NO
+
+   Reason:
+   * `cat` requires a file argument to display its contents in it. There is nothing to print out when no filename is given.
+   * Therefore, it provides a scanner. Whatever typed in the scanner is repeated in the next line, and it could be ended by Ctrl'C.
 
      
 2. With a path to a directory
 
-   Command:
-   ```
-   # Example for cat command
-   # A path to a directory
-   cat lecture1
-   ```
-   Output (running in the home directory `/home`):
-   * `cat: lecture1: Is a directory`
-   * It returns an error.
-   * `cat` requires a file argument to display its contents. There is nothing to print out when just a directory is given. 
+   Command and Output:
+  
+   ![Image](catlecture1.png)
+   
+   Current Working Directory: `/home`
+   
+   Error or Not: ERROR
+
+   Reason:
+   * `cat` requires a filename to display its contents. There is nothing to print out when just a directory is given since it's neither a file or a folder.
+   * `cat` couldn't print the contents in a directory.
 
   
 3. With a path to a file
 
-   Command:
-   ```
-   # Example for cat command
-   # A path to a file
-   cat en-us.txt
-   ```
-   Output (running in the directory `/home/lecture1/messages`):
-   * `Hello World!`
-   * `cat` displays the contents in the given file `/home/lecture1/messages/en-us.txt`.
+   Command and Output:
+     
+   ![Image](caten-us.png)
+   
+   Current Working Directory: `/home/lecture1/messages`
+   
+   Error or Not: NO
+
+   Reason:
+   * Since `en-us.txt` is a text file, `cat` displays the contents in the given file `/home/lecture1/messages/en-us.txt`, which is one sentence `Hello World!`.
