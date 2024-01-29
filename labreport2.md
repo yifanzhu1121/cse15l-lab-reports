@@ -162,5 +162,17 @@ Two screenshots of using `/add-message`:
 **Part 2**: 
 > Using the command line, show with `ls`
 
-* 
+* absolute path to the private key: `/User/kikizhu/id_rsa`
+  
+  ![Image](1.png)
+  
+  <br />
+* absolute path to the public key: `/home/linux/ieng6/oce/3g/yiz257/authorized_keys`
+  
+  ![Image](2.png)
+  
+  <br />
+  
+* terminal interaction when logging into `ieng6` without password:
+  ![Image](3.png)
 
