@@ -151,11 +151,7 @@ Two screenshots of using `/add-message`:
       it changes to the first second part of the string -- `"How+are+you"`.
     - `user`: It changes to the second second part of the string -- `"yash"`.
     - `newMessage`: It makes the values above a complete string -- `"yash: How+are+you\n"`.
-    - `chatMessages`: After adding `newMessage`, it changes to
-      ```
-      "jpolitz: Hello
-       yash: How+are+you\n"
-      ```
+    - `chatMessages`: After adding `newMessage`, it changes to `"jpolitz: Hello\nyash: How+are+you\n"`
 
 <br />
 
