@@ -153,8 +153,8 @@ Two screenshots of using `/add-message`:
     - `newMessage`: It makes the values above a complete string -- `"yash: How+are+you\n"`.
     - `chatMessages`: After adding `newMessage`, it changes to
       ```
-      "jpolitz: Hello\n"
-      "yash: How+are+you\n"
+      "jpolitz: Hello
+       yash: How+are+you\n"
       ```
 
 <br />
