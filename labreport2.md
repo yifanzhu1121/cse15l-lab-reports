@@ -172,3 +172,14 @@ Two screenshots of using `/add-message`:
 * terminal interaction when logging into `ieng6` without password:
   ![Image](3.png)
 
+
+<br />
+
+**Part 3**: 
+> New things learned from Week 2 or 3
+
+One useful new thing I learned from the lab 3 is to set the remote login without password. 
+I had taken ECE15 which required us to login the remote user account everytime when we 
+were writing the PAs. From Lab 3, I learned to set the private and public key and story 
+it in my own laptop to be able to have terminal interation when logging into `ieng6`
+without password.
