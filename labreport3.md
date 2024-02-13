@@ -10,7 +10,9 @@
   the input array in reversed order.
 
 <br />
+
 The failure-inducing input for the program:
+
 ```
 @Test
   public void testReversed() {
@@ -21,6 +23,8 @@ The failure-inducing input for the program:
 ```
 The output of running the test:
 
+
+
 <br />
 The input that doesn't induce a failure:
 
@@ -30,6 +34,7 @@ The output of running the test:
 <br />
 The before-and-after code change required to fix:
 BEFORE:
+
 ```
 static int[] reversed(int[] arr) {
     int[] newArray = new int[arr.length];
@@ -39,7 +44,9 @@ static int[] reversed(int[] arr) {
     return arr;
   }
 ```
+
 AFTER:
+
 ```
 static int[] reversed(int[] arr) {
     int[] newArr = new int[arr.length];
