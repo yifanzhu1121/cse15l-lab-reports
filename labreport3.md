@@ -23,13 +23,16 @@ The failure-inducing input for the program:
 ```
 The output of running the test:
 
-
+![Image](test1.png)
 
 <br />
 The input that doesn't induce a failure:
 
 <br />
 The output of running the test:
+
+![Image](test2.png)
+
 
 <br />
 The before-and-after code change required to fix:
