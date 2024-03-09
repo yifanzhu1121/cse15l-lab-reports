@@ -1,4 +1,4 @@
-## Lab Report 4
+## Lab Report 5
 > *Week 8 & Week 9*
 
 <br />
@@ -9,7 +9,7 @@ Hi everyone,
 
 I'm having some trouble with my Java program which is designed to list the contents of a specified directory. Despite the directory existing and containing files, my program throws a `FileNotFoundException`. Here's the error message:
 
-![Image](1.png)
+![Image](post1.png)
 
 I thought the problem might be with the directory path I'm providing, but I've double-checked and it seems correct. The program is supposed to list files from the data directory within the project folder, but it's not finding the directory for some reason.
 
@@ -27,8 +27,32 @@ The `FileNotFoundException` could indeed suggest a path issue. Try running the `
 
 **Follow-up Post**: 
 
-Thanks! I tried running `pwd` and `ls`, it does exist at the level. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to the data directory. I assumed the working directory would be the project root `/home/user/myJavaProject`, but it turns out the working directory was actually set to the src directory where my Java file is located `/home/user/myJavaProject/src`.
+Thanks! I tried running `pwd` and `ls` for both `src` (the one has the `DirLister.java`) and `myJava` (the one has `src`), `data` does exist in `myJava`. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to `data`. I assumed the working directory would be the project root `/home/user/myJava`, but it turns out the working directory was actually set to `src` where my Java file is located `/home/user/myJava/src`.
 
-![Image](1.png)
+![Image](post2.png)
 
-I modified the path to the `data` directory to account for the actual working directory by changing the path to `../data`, which is one level up from the current `src`. And now it lists the files in `data` without throwing error message.
+<br />
+
+The issue was at line 6:
+```
+File dir = new File("data");
+```
+![Image](post3.png)
+
+<br />
+
+I modified the path to `data` to account for the actual working directory by changing the path to `../data`, which is one level up from the current `src`. And now it lists the files in `data` without throwing error message. Thanks for your help!
+
+Change made at line 6:
+```
+File dir = new File("../data");
+```
+![Image](post4.png)
+
+<br />
+
+![Image](post5.png)
+
+
+
+
