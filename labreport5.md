@@ -43,16 +43,13 @@ File dir = new File("data");
 
 I modified the path to `data` to account for the actual working directory by changing the path to `../data`, which is one level up from the current `src`. And now it lists the files in `data` without throwing error message. Thanks for your help!
 
-Change made at line 6:
+![Image](post5.png)
+
+<br />
+
+
+The change made at line 6:
 ```
 File dir = new File("../data");
 ```
 ![Image](post4.png)
-
-<br />
-
-![Image](post5.png)
-
-
-
-
