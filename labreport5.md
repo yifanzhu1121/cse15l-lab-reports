@@ -7,7 +7,7 @@
 
 Hi everyone,
 
-I'm having some trouble with my Java program which is designed to list the contents of a specified directory. Despite the directory existing and containing files, my program throws a `FileNotFoundException`. Here's the error message:
+I'm having some trouble with my Java program which is designed to list the contents of a specified directory. Despite the directory existing and containing files, my program throws a `FileNotFoundException`. Here's the error message and my bash script:
 
 ![Image](post1.png)
 
@@ -29,7 +29,7 @@ The `FileNotFoundException` could indeed suggest a path issue. Try confirming th
 
 Thanks! I tried running `pwd` and `ls` for both `src` (the one has the `DirLister.java`) and `myJava`, `data` does exist in `myJava`. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to `data`. I assumed the working directory would be the project root `/home/user/myJava`, but it turns out the working directory was actually set to `src` where my Java file is located `/home/user/myJava/src`.
 
-![Image](post6.png)
+![Image](post2.png)
 
 <br />
 
