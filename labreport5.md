@@ -31,4 +31,4 @@ Thanks! I tried running `pwd` and `ls`, it does exist at the level. But upon rev
 
 ![Image](1.png)
 
-I modified the path to the data directory to account for the actual working directory by 
+I modified the path to the `data` directory to account for the actual working directory by changing the path to `../data`, which is one level up from the current `src`. And now it lists the files in `data` without throwing error message.
