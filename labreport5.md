@@ -3,6 +3,8 @@
 
 <br />
 
+**Part 1**: 
+
 **Original Post**: 
 
 Hi everyone,
@@ -53,3 +55,9 @@ The change made at line 6:
 File dir = new File("../data");
 ```
 ![Image](post4.png)
+
+<br />
+
+**Part 2**: 
+
+I know it's quite a easy gain but I did learn a lot from the lab that taught us how to use the editor `vim`. I used to open a VScode and find the file in my labtop to open it there to edit, but using `vim` in the terminal make it much faster and more convenient. It's really interesting for me to figure out how to use those commands to efficiently edit some code in my java files. It helps a lot.
