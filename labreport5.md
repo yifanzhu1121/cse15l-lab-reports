@@ -27,10 +27,8 @@ The `FileNotFoundException` could indeed suggest a path issue. Try running the `
 
 **Follow-up Post**: 
 
-Thanks! I tried running the program with the absolute path, and the issue remained 
-the same. And here's a screenshot of it and another one of the ls -l command output:
+Thanks! I tried running `pwd` and `ls`, it does exist at the level. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to the data directory. I assumed the working directory would be the project root `/home/user/myJavaProject`, but it turns out the working directory was actually set to the src directory where my Java file is located `/home/user/myJavaProject/src`.
 
 ![Image](1.png)
 
-It looks like the file is there, and the permissions seem fine. So the issue might 
-be somewhere in how the program reads the file line by line. Maybe it's trying to open the file multiple times within a loop?
+I modified the path to the data directory to account for the actual working directory by 
