@@ -11,7 +11,7 @@ I'm having some trouble with my Java program which is designed to list the conte
 
 ![Image](post1.png)
 
-I thought the problem might be with the directory path I'm providing, but I've double-checked and it seems correct. The program is supposed to list files from the data directory within the project folder, but it's not finding the directory for some reason.
+I thought the problem might be with the directory path I'm providing, but I've double-checked and it seems correct. The program is supposed to list files from `data` within the project folder `myJava`, but it's not finding the directory for some reason.
 
 Thanks for helping.
 
@@ -21,15 +21,15 @@ Thanks for helping.
 
 Hi,
 
-The `FileNotFoundException` could indeed suggest a path issue. Try running the `pwd` command to confirm the current working directory. Also, you could check the contents of your current directory. This will help us see if the data directory is in the expected location relative to where your program is running.
+The `FileNotFoundException` could indeed suggest a path issue. Try confirming the current working directory and the contents in it. And also think about if there is anything in your code leading to the unexpected directory. This will help you see if `data` is in the expected location relative to where your program is running.
 
 <br />
 
 **Follow-up Post**: 
 
-Thanks! I tried running `pwd` and `ls` for both `src` (the one has the `DirLister.java`) and `myJava` (the one has `src`), `data` does exist in `myJava`. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to `data`. I assumed the working directory would be the project root `/home/user/myJava`, but it turns out the working directory was actually set to `src` where my Java file is located `/home/user/myJava/src`.
+Thanks! I tried running `pwd` and `ls` for both `src` (the one has the `DirLister.java`) and `myJava`, `data` does exist in `myJava`. But upon reviewing my code, I realized the issue lies in how I'm specifying the path to `data`. I assumed the working directory would be the project root `/home/user/myJava`, but it turns out the working directory was actually set to `src` where my Java file is located `/home/user/myJava/src`.
 
-![Image](post2.png)
+![Image](post6.png)
 
 <br />
 
